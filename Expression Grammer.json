@@ -1,0 +1,33 @@
+{
+  "Productions": [
+    {
+      "NonTerminal": "E`",
+      "Rule": [ "E" ]
+    },
+    {
+      "NonTerminal": "E",
+      "Rule": [ "E", "+", "T" ]
+    },
+
+    {
+      "NonTerminal": "E",
+      "Rule": [ "T" ]
+    },
+    {
+      "NonTerminal": "T",
+      "Rule": [ "T", "*", "F" ]
+    },
+    {
+      "NonTerminal": "T",
+      "Rule": [ "F" ]
+    },
+    {
+      "NonTerminal": "F",
+      "Rule": [ "(", "E", ")" ]
+    },
+    {
+      "NonTerminal": "F",
+      "Rule": [ "id" ]
+    }
+  ]
+}
