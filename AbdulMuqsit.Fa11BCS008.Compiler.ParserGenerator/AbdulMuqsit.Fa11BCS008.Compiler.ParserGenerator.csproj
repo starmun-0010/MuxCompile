@@ -4,4 +4,12 @@
     <TargetFramework>netstandard1.5</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\AbdulMuqsit.Fa11BCS008.Compiler.Common.csproj" />
+  </ItemGroup>
+
 </Project>
