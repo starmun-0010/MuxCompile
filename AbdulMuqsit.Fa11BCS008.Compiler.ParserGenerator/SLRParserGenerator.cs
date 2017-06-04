@@ -15,10 +15,10 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
             _grammer = grammer;
         }
 
-        private List<List<Item>> _LR0Automaton;
+        public List<List<Item>> LR0Automaton { get; set; }
 
 
-        private void ComputeLR0ItemsCollection()
+        private void ComputeLR0Automaton()
         {
             var closures = new List<List<Item>>();
             var newClosures = new List<List<Item>>();
@@ -48,7 +48,8 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                 newClosures.Clear();
             } while (isAnyNewItemSetInserted);
 
-            _LR0Automaton = closures;
+
+            LR0Automaton = closures;
 
             List<Item> Closure(List<Item> itemsSet)
             {
@@ -153,7 +154,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
         public ILRParseTable GenerateParser()
         {
 
-            ComputeLR0ItemsCollection();
+            ComputeLR0Automaton();
 
 
             throw new NotImplementedException();
