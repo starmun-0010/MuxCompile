@@ -6,7 +6,7 @@ using AbdulMuqsit.Fa11BCS008.Compiler.Common;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Infrastructure
 {
-    public class CustomListOfItemComparer : IEqualityComparer<List<Item>>
+    public class KernelItemsComparer : IEqualityComparer<List<Item>>
     {
         public bool Equals(List<Item> x, List<Item> y)
         {

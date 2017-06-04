@@ -34,7 +34,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                     foreach (var symbol in _grammer.Symbols)
                     {
                         var nextItemSet = GoTo(itemSet, symbol);
-                        if (nextItemSet.kernelItems.Count > 0 && !closures.Contains(nextItemSet.kernelItems, new CustomListOfItemComparer()))
+                        if (nextItemSet.kernelItems.Count > 0 && !closures.Contains(nextItemSet.kernelItems, new KernelItemsComparer()))
                         {
                             newClosures.Add(nextItemSet.AllItems);
 
