@@ -14,5 +14,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
         List<string> Symbols { get; }
 
         List<Item> Items { get; }
+
+        List<string> Follow(string nonTerminal);
     }
 }

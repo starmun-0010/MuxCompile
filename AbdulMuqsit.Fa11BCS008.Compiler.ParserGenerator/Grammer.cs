@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AbdulMuqsit.Fa11BCS008.Compiler.Common;
@@ -8,7 +9,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 {
     public class Grammer : IGrammer
     {
-        public string StartSymbol { get; }
+        public string StartSymbol => Productions.FirstOrDefault()?.NonTerminal;
         public List<Production> Productions { get; set; }
 
         public List<string> NonTerminals { get; private set; }
@@ -18,8 +19,10 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 
         public List<Item> Items { get; set; }
 
-
-
+        public List<string> Follow(string nonTerminal)
+        {
+            throw new NotImplementedException();
+        }
 
         public Task Initialize()
         {
