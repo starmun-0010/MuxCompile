@@ -6,6 +6,6 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
 {
     public interface ILRParserGenerator
     {
-        ILRParseTable GenerateParser();
+        LRParseTable GenerateParser();
     }
 }
