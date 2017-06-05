@@ -8,9 +8,9 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 {
     public class SLRParserGenerator : ILRParserGenerator
     {
-        private IGrammer _grammer;
+        private IGrammar _grammer;
 
-        public SLRParserGenerator(IGrammer grammer)
+        public SLRParserGenerator(IGrammar grammer)
         {
             _grammer = grammer;
         }

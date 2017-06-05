@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
 {
-    public interface IGrammer
+    public interface IGrammar
     {
         string StartSymbol { get; }
         List<Production> Productions { get; }

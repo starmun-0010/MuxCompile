@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
 {
-    public interface IGrammerReader
+    public interface IGrammarReader
     {
-        IGrammer Read(string @string);
+        IGrammar Read(string @string);
 
     }
 }

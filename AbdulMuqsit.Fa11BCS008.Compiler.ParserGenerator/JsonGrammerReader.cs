@@ -7,11 +7,11 @@ using Newtonsoft.Json;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 {
-    public class JsonGrammerReader : IGrammerReader
+    public class JsonGrammerReader : IGrammarReader
     {
-        public IGrammer Read(string @string)
+        public IGrammar Read(string @string)
         {
-            return JsonConvert.DeserializeObject<Grammer>(@string);
+            return JsonConvert.DeserializeObject<Grammar>(@string);
         }
 
     }

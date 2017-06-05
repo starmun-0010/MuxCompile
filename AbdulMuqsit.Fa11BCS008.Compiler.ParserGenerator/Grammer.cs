@@ -7,7 +7,7 @@ using AbdulMuqsit.Fa11BCS008.Compiler.Common;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 {
-    public class Grammer : IGrammer
+    public class Grammar : IGrammar
     {
         public string StartSymbol => Productions.FirstOrDefault()?.NonTerminal;
         public List<Production> Productions { get; set; }
@@ -21,7 +21,78 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 
         public List<string> Follow(string nonTerminal)
         {
-            throw new NotImplementedException();
+
+            var followSet = new List<string>();
+            if (nonTerminal == StartSymbol)
+            {
+                followSet.Add("$");
+            }
+            foreach (var production in Productions)
+            {
+
+                if (production.Rule.Contains(nonTerminal))
+                {
+
+                    if (production.Rule.Last() == nonTerminal)
+                    {
+
+                        if (production.NonTerminal != nonTerminal)
+                        {
+                            followSet.AddRange(Follow(production.NonTerminal));
+
+                        }
+                    }
+                    else
+                    {
+                        var firstOfNextSymbol = First(production.Rule[production.Rule.IndexOf(nonTerminal) + 1]);
+                        if (!firstOfNextSymbol.Contains("ϵ"))
+                        {
+                            followSet.AddRange(firstOfNextSymbol);
+                        }
+
+                    }
+
+                }
+            }
+            return followSet;
+        }
+
+        private List<string> First(string symbol)
+        {
+            var firstSet = new List<string>();
+            if (Terminals.Contains(symbol))
+            {
+                firstSet.Add(symbol);
+                return firstSet;
+            }
+            if (Productions.Any(p => p.NonTerminal == symbol && p.Rule.Contains("ϵ")))
+            {
+                firstSet.Add("ϵ");
+            }
+            if (NonTerminals.Contains(symbol))
+            {
+                foreach (var production in Productions.Where(p => p.NonTerminal == symbol))
+                {
+                    List<string> first = null;
+                    var ruleIndex = 0;
+
+
+                    do
+                    {
+                        if (production.Rule[ruleIndex] != symbol)
+                        {
+
+                            first = First(production.Rule[ruleIndex]);
+                            firstSet.AddRange(first);
+                            ruleIndex++;
+                        }
+                    } while ((bool)first?.Contains("ϵ") && production.Rule[ruleIndex] != symbol);
+
+
+                }
+
+            }
+            return firstSet;
         }
 
         public Task Initialize()
@@ -60,14 +131,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                 Terminals = terminals;
             }
 
-            void InitializeFirstSet(List<string> symbols)
-            {
-                throw new NotImplementedException();
-            }
-            void InitializeFollowSet(List<string> symbols)
-            {
-                throw new NotImplementedException();
-            }
+
 
             void InitializeItems()
             {
