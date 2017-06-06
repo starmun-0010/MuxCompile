@@ -54,7 +54,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 
                 }
             }
-            return followSet;
+            return followSet.Distinct().ToList();
         }
 
         private List<string> First(string symbol)
@@ -92,7 +92,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                 }
 
             }
-            return firstSet;
+            return firstSet.Distinct().ToList();
         }
 
         public Task Initialize()

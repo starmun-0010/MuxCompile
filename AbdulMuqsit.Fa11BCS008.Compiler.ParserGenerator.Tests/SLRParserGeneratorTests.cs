@@ -15,23 +15,23 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
         {
             _fixture = fixture;
         }
-        [Fact]
-        public void ShouldGenerateAccuratreParseTable()
-        {
-            //arrange
+        //[Fact]
+        //public void ShouldGenerateAccuratreParseTable()
+        //{
+        //    //arrange
 
 
-            var parserGenerator = new SLRParserGenerator(_fixture.Grammar);
+        //    var parserGenerator = new SLRParserGenerator(_fixture.Grammar);
 
 
-            //act 
+        //    //act 
 
 
-            var parseTable = parserGenerator.GenerateParser();
+        //    var parseTable = parserGenerator.GenerateParser();
 
 
-            Assert.Equal(parseTable.Action[0]["id"], (Common.Action.Shift, 5));
+        //    Assert.Equal(parseTable.Action[0]["id"], (Common.Action.Shift, 5));
 
-        }
+        //}
     }
 }

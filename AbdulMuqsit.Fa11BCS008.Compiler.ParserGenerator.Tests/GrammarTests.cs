@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using AbdulMuqsit.Fa11BCS008.Compiler.Common;
 using Xunit;
@@ -33,7 +34,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
             var grammar = new Grammar() { Productions = productions };
             grammar.Initialize();
             var followOfE = grammar.Follow("E");
-            Assert.Equal(new List<string>() { "$", ")", "+" }, followOfE);
+            Assert.Equal((new List<string>() { "$", ")", "+" }).Union(followOfE).Distinct().Count(), 3);
         }
 
     }

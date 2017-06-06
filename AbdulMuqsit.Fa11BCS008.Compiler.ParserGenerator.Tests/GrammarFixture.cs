@@ -98,6 +98,8 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
             var mockGrammar = new Mock<IGrammar>();
 
 
+
+
             mockGrammar.Setup(g => g.Productions).Returns(productions);
             mockGrammar.Setup(g => g.Symbols).Returns(symbols);
             mockGrammar.Setup(g => g.Terminals).Returns(terminals);
@@ -106,6 +108,8 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
             mockGrammar.Setup(g => g.Items).Returns(items);
 
             mockGrammar.Setup(g => g.StartSymbol).Returns("E`");
+
+            mockGrammar.Setup(g => g.Follow("E")).Returns(new List<string>() { "", "", "" });
 
             Grammar = mockGrammar.Object;
 

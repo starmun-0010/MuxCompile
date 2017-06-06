@@ -95,9 +95,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\AbdulMuqsit.Fa11BCS008.Compiler.Common.csproj">
+      <Project>{aa8e93db-4c6a-4548-8ebf-922f284a131b}</Project>
+      <Name>AbdulMuqsit.Fa11BCS008.Compiler.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Lexer\AbdulMuqsit.Fa11BCS008.Compiler.Lexer.csproj">
       <Project>{2d97835f-2194-43ad-8342-9174774fe1b7}</Project>
       <Name>AbdulMuqsit.Fa11BCS008.Compiler.Lexer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.csproj">
+      <Project>{31f9e02f-c635-4c6f-8b88-b01342ca3c7b}</Project>
+      <Name>AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Parser\AbdulMuqsit.Fa11BCS008.Compiler.Parser.csproj">
+      <Project>{67fbc876-2c62-4f1a-9bf1-531f61992f1a}</Project>
+      <Name>AbdulMuqsit.Fa11BCS008.Compiler.Parser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

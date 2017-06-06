@@ -8,11 +8,11 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
 {
     public class SLRParserGenerator : ILRParserGenerator
     {
-        private IGrammar _grammer;
+        private IGrammar _grammar;
 
-        public SLRParserGenerator(IGrammar grammer)
+        public SLRParserGenerator(IGrammar grammar)
         {
-            _grammer = grammer;
+            _grammar = grammar;
         }
 
         public List<List<Item>> LR0Automaton { get; set; }
@@ -22,7 +22,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
         {
             var closures = new List<List<Item>>();
             var newClosures = new List<List<Item>>();
-            var itemsList = new List<Item>() { _grammer.Items.First() };
+            var itemsList = new List<Item>() { _grammar.Items.First() };
             closures.Add(Closure(itemsList));
             var isAnyNewItemSetInserted = false;
 
@@ -31,7 +31,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                 isAnyNewItemSetInserted = false;
                 foreach (var itemSet in closures)
                 {
-                    foreach (var symbol in _grammer.Symbols)
+                    foreach (var symbol in _grammar.Symbols)
                     {
                         var nextItemSet = GoTo(itemSet, symbol);
                         if (nextItemSet.kernelItems.Count > 0 && !closures.Contains(nextItemSet.kernelItems, new KernelItemsComparer()))
@@ -79,10 +79,10 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                         (var symbol, var index) = GetNextSymnbol(item);
                         //if the symbol is not a terminal (i.e. is a non terminal) 
                         //and the productions for this non are not already inserted in current set then
-                        if (!_grammer.Terminals.Contains(item.Rule[index]) && !insertedSymbols.Contains(symbol))
+                        if (!_grammar.Terminals.Contains(item.Rule[index]) && !insertedSymbols.Contains(symbol))
                         {
                             //add all productions for the non terminal to the items set as new items
-                            foreach (var production in _grammer.Productions)
+                            foreach (var production in _grammar.Productions)
                             {
                                 if (production.NonTerminal == symbol)
                                 {
@@ -160,13 +160,15 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
             {
                 foreach (var state in LR0Automaton.Select((state, index) => new { state, index }))
                 {
+                    parseTable.Action.Add(state.index, new Dictionary<string, (Common.Action action, int? reference)>());
+                    parseTable.GoTo.Add(state.index, new Dictionary<string, int>());
                     foreach (var item in state.state)
                     {
-                        parseTable.Action.Add(state.index, new Dictionary<string, (Common.Action action, int? reference)>());
+
                         if (item.Rule.Last() == ".")
                         {
                             //if it is the production reducing to augmented symbol
-                            if (item == _grammer.Items[1])
+                            if (item == _grammar.Items[1])
                             {
 
                                 parseTable.Action[state.index].Add("$", (Common.Action.Accept, null));
@@ -175,17 +177,17 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                             }
                             else
                             {
-                                foreach (var terminal in _grammer.Follow(item.NonTerminal))
+                                foreach (var terminal in _grammar.Follow(item.NonTerminal))
                                 {
                                     //if you can figure this out props to you!
-                                    parseTable.Action[state.index].Add(terminal, (Common.Action.Reduce, _grammer.Productions.IndexOf(_grammer.Productions.First(p => p.Rule.SequenceEqual(item.Rule.Take(item.Rule.Count - 2))))));
+                                    parseTable.Action[state.index].Add(terminal, (Common.Action.Reduce, _grammar.Productions.IndexOf(_grammar.Productions.First(p => p.Rule.SequenceEqual(item.Rule.Take(item.Rule.Count - 1))))));
 
 
                                 }
                             }
 
                         }
-                        else if (_grammer.Terminals.Contains(item.Rule[item.Rule.IndexOf(".") + 1]))
+                        else if (_grammar.Terminals.Contains(item.Rule[item.Rule.IndexOf(".") + 1]))
                         {
                             var gotoResult = GoTo(state.state, item.Rule[item.Rule.IndexOf(".") + 1]).kernelItems;
                             var nextState = LR0Automaton.Single(i => new KernelItemsComparer().Equals(i, gotoResult));
@@ -194,7 +196,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
                         }
                     }
 
-                    foreach (var nonTerminal in _grammer.NonTerminals.Where(nt => nt != _grammer.StartSymbol))
+                    foreach (var nonTerminal in _grammar.NonTerminals.Where(nt => nt != _grammar.StartSymbol))
                     {
                         var gotoResult = GoTo(state.state, nonTerminal);
                         if (gotoResult.kernelItems.Count > 0)
@@ -211,6 +213,6 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
             return null;
         }
 
-     
+
     }
 }
