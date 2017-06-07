@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using AbdulMuqsit.Fa11BCS008.Compiler.Lexer.Contracts;
+using AbdulMuqsit.Fa11BCS008.Compiler.Common;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
 
 {
-    public partial class Lexer : ILexer
+    public class Lexer : ILexer
     {
         private char[] _input;
 
-        public Lexer(string input) => _input = input.ToCharArray();
 
         //private members
         #region Private Members
@@ -23,8 +22,9 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
         #endregion
 
         //constructor 
-        Lexer()
+        public Lexer(string input)
         {
+            _input = input.ToCharArray();
             InitializePrivateMembers();
 
             ReserveKeywords();
@@ -41,7 +41,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
                 ReserveKeyword(Words.False);
                 ReserveKeyword(Types.Bool);
                 ReserveKeyword(Types.Char);
-                ReserveKeyword(Types.Bool);
+                ReserveKeyword(Types.Int);
                 ReserveKeyword(Types.Float);
 
             }
@@ -56,13 +56,13 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
         }
 
         //the meat and bones of this class
-        public Token GetNextToken()
+        public IToken GetNextToken()
         {
 
             while (_currentCharacterIndex < _input.Length)
             {
                 SkipWhiteSpace();
-
+                CountLineNumbers();
                 var token = AnalyzeCompositeTokens();
                 if (token != null) return token;
 
@@ -75,10 +75,10 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
                 return AnalyzeOtherCharacters();
 
             }
+            return new Token(Tag.End);
 
-            AdvanceCurrentLexeme();
 
-            return new Token(Tag.AND);
+
 
             #region local functions
 
@@ -93,6 +93,16 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
 
             };
 
+
+            void CountLineNumbers()
+            {
+                while (Environment.NewLine.Contains(_currentCharacter))
+                {
+                    AdvanceCurrentCharacter();
+                }
+
+
+            };
             //go forward one character
             void AdvanceCurrentCharacter()
             {
@@ -100,13 +110,13 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
                 _currentCharacter = _input[_currentCharacterIndex];
             };
 
-            //current lexeme is complete. move to one character after it
-            void AdvanceCurrentLexeme()
-            {
-                AdvanceCurrentCharacter();
-                _currentLexemeBeginIndex = _currentCharacterIndex;
+            ////current lexeme is complete. move to one character after it
+            //void AdvanceCurrentLexeme()
+            //{
+            //    AdvanceCurrentCharacter();
+            //    _currentLexemeBeginIndex = _currentCharacterIndex;
 
-            };
+            //};
 
             //tells if the next character in the input is same as the argument
             bool IsNextCharacter(char character) => _input[_currentCharacterIndex + 1] == character;

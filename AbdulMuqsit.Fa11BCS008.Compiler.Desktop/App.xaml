@@ -1,9 +1,6 @@
-﻿<Application x:Class="AbdulMuqsit.Fa11BCS008.Compiler.Desktop.App"
+﻿<Application
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:AbdulMuqsit.Fa11BCS008.Compiler.Desktop"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>
+             x:Class="AbdulMuqsit.Fa11BCS008.Compiler.Desktop.App"
+             StartupUri="MainWindow.xaml"/>

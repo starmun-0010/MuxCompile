@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
+namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
 {
-    public enum Tag 
+    public enum Tag
     {
 
         AND,
@@ -29,7 +29,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
         UnaryNot,
         Assignment,
         GreaterThan,
-        LessThan
-
+        LessThan,
+        End
     }
 }

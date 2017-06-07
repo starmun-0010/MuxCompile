@@ -5,4 +5,8 @@
     <AssemblyName>AbdulMuqsit.Fa11BCS008.Compiler.Parser</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\AbdulMuqsit.Fa11BCS008.Compiler.Common.csproj" />
+  </ItemGroup>
+
 </Project>

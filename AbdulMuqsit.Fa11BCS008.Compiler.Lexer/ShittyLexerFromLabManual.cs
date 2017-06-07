@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
-using AbdulMuqsit.Fa11BCS008.Compiler.Lexer.Contracts;
+using AbdulMuqsit.Fa11BCS008.Compiler.Common;
 
 namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
 {
@@ -15,7 +15,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
         private string tfInput;
         private string tfTokens;
 
-        public Token GetNextToken()
+        public IToken GetNextToken()
         {
             //taking user input from rich text box
             String userInput = tfInput;

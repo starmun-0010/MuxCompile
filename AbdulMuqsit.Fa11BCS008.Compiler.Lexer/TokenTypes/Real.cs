@@ -4,7 +4,7 @@
     {
         private string value;
 
-        public Real(string value) : base(Compiler.Lexer.Tag.REAL)
+        public Real(string value) : base(Common.Tag.REAL)
         {
             this.value = value;
         }

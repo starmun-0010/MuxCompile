@@ -4,7 +4,7 @@
     {
         private string value;
 
-        public Num(string value) : base(Compiler.Lexer.Tag.NUM)
+        public Num(string value) : base(Common.Tag.NUM)
         {
             this.value = value;
         }

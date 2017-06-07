@@ -7,13 +7,17 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="Moq" Version="4.7.12" />
+
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\AbdulMuqsit.Fa11BCS008.Compiler.Common.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Lexer\AbdulMuqsit.Fa11BCS008.Compiler.Lexer.csproj" />
     <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Parser\AbdulMuqsit.Fa11BCS008.Compiler.Parser.csproj" />
   </ItemGroup>
 
   <ItemGroup>
