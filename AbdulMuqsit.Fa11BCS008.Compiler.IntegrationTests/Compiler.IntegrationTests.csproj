@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\AbdulMuqsit.Fa11BCS008.Compiler.Common.csproj" />
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Lexer\AbdulMuqsit.Fa11BCS008.Compiler.Lexer.csproj" />
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.csproj" />
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Parser\AbdulMuqsit.Fa11BCS008.Compiler.Parser.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\Compiler.Common.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Lexer\Compiler.Lexer.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator\Compiler.ParserGenerator.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Parser\Compiler.Parser.csproj" />
   </ItemGroup>
 
   <ItemGroup>

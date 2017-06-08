@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\AbdulMuqsit.Fa11BCS008.Compiler.Common.csproj" />
+    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\Compiler.Common.csproj" />
   </ItemGroup>
 
 </Project>
