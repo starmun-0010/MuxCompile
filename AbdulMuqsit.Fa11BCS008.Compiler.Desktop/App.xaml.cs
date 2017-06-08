@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Desktop
+namespace Compiler.Desktop
 {
     /// <summary>
     /// Interaction logic for App.xaml

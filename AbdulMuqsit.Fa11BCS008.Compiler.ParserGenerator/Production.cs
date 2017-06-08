@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
+namespace Compiler.ParserGenerator
 {
 //    public class Production: IProduction
 //    {

@@ -1,4 +1,4 @@
-﻿namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
+﻿namespace Compiler.Common
 {
     public interface IOutSource
     {

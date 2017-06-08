@@ -1,4 +1,4 @@
-﻿namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
+﻿namespace Compiler.Lexer
 {
     internal class Num : Token
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
+namespace Compiler.Common
 {
     public interface IGrammar
     {

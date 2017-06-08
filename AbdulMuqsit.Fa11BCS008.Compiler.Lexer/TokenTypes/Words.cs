@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
+namespace Compiler.Lexer
 {
     public static class Words
     {

@@ -1,6 +1,6 @@
 ﻿<Application
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AbdulMuqsit.Fa11BCS008.Compiler.Desktop"
-             x:Class="AbdulMuqsit.Fa11BCS008.Compiler.Desktop.App"
+             xmlns:local="clr-namespace:Compiler.Desktop"
+             x:Class="Compiler.Desktop.App"
              StartupUri="MainWindow.xaml"/>

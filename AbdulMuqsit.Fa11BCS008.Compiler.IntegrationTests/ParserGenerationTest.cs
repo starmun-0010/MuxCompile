@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
-using AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator;
+using Compiler.Common;
+using Compiler.ParserGenerator;
 using Xunit;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.IntegrationTests
+namespace IntegrationTests
 {
     public class ParserGenerationTest
     {
@@ -21,7 +21,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.IntegrationTests
 
 
             var parseTable = parserGenerator.GenerateParser();
-            Assert.Equal(parseTable.Action[0]["id"], (Common.Action.Shift, 5));
+            Assert.Equal(parseTable.Action[0]["id"], (Compiler.Common.Action.Shift, 5));
         }
     }
 }

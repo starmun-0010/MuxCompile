@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
-    <AssemblyName>AbdulMuqsit.Fa11BCS008.Compiler.Parser</AssemblyName>
+    <AssemblyName>Compiler.Parser</AssemblyName>
+    <RootNamespace>Compiler.Parser</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

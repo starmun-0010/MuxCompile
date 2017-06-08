@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Common
+namespace Compiler.Common
 {
     public class Production
     {

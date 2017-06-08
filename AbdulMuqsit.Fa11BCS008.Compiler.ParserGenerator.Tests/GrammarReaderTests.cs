@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 using Xunit;
 using System.Linq;
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
+namespace Compiler.ParserGenerator.Tests
 {
     public class GrammarReaderTests
     {

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Desktop
+namespace Compiler.Desktop
 {
     /// <summary>
     /// Interaction logic for ParseTreeViewer.xaml

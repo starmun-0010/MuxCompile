@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
-using AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Infrastructure;
+using Compiler.Common;
+using Compiler.ParserGenerator.Infrastructure;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
+namespace Compiler.ParserGenerator
 {
     public class SLRParserGenerator : ILRParserGenerator
     {

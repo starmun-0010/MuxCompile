@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Desktop.Properties {
+namespace Compiler.Desktop.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.Desktop.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AbdulMuqsit.Fa11BCS008.Compiler.Desktop.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Compiler.Desktop.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

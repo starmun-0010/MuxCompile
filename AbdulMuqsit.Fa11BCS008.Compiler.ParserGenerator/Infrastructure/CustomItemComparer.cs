@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Infrastructure
+namespace Compiler.ParserGenerator.Infrastructure
 {
     public class CustomItemComparer : IEqualityComparer<Item>
     {

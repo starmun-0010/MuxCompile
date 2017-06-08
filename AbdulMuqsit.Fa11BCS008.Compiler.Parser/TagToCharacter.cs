@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Parser
+namespace Compiler.Parser
 {
     public static class TagToCharacter
     {

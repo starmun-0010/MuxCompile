@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 using Moq;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
+namespace Compiler.ParserGenerator.Tests
 {
     public class GrammarFixture : IDisposable
     {

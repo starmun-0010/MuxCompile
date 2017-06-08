@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
+    <AssemblyName>Compiler.Lexer</AssemblyName>
+    <RootNamespace>Compiler.Lexer</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

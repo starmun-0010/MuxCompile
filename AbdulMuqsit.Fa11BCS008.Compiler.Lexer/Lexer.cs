@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Lexer
+namespace Compiler.Lexer
 
 {
     public class Lexer : ILexer

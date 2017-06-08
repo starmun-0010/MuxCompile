@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 using Xunit;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests
+namespace Compiler.ParserGenerator.Tests
 {
 
     public class GrammarTests : IClassFixture<GrammarFixture>

@@ -14,10 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
-using AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator;
+using Compiler.Common;
+using Compiler.ParserGenerator;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.Desktop
+namespace Compiler.Desktop
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

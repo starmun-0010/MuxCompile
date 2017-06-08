@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
+using Compiler.Common;
 using Newtonsoft.Json;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator
+namespace Compiler.ParserGenerator
 {
     public class JsonGrammerReader : IGrammarReader
     {

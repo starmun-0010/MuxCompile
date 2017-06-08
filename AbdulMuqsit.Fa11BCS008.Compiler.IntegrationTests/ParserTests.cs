@@ -4,14 +4,14 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using AbdulMuqsit.Fa11BCS008.Compiler.Common;
-using AbdulMuqsit.Fa11BCS008.Compiler.Lexer;
-using AbdulMuqsit.Fa11BCS008.Compiler.Parser;
-using AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator;
+using Compiler.Common;
+using Compiler.Lexer;
+using Compiler.Parser;
+using Compiler.ParserGenerator;
 using Moq;
 using Xunit;
 
-namespace AbdulMuqsit.Fa11BCS008.Compiler.IntegrationTests
+namespace IntegrationTests
 {
     public class ParserTests
     {
@@ -27,7 +27,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.IntegrationTests
             var parserGenerator = new SLRParserGenerator(grammar);
             var input = "k + k";
 
-            var lexer = new Lexer.Lexer(input);
+            var lexer = new Lexer(input);
 
             var parseTable = parserGenerator.GenerateParser();
 
@@ -36,7 +36,7 @@ namespace AbdulMuqsit.Fa11BCS008.Compiler.IntegrationTests
             {
                 Console.WriteLine(s);
                 Debug.WriteLine(s);
-                
+
                 outPuts.Add(s);
             });
 
