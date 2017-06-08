@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.Common\Compiler.Common.csproj" />
-    <ProjectReference Include="..\AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator\Compiler.ParserGenerator.csproj" />
+    <ProjectReference Include="..\Compiler.Common\Compiler.Common.csproj" />
+    <ProjectReference Include="..\Compiler.ParserGenerator\Compiler.ParserGenerator.csproj" />
   </ItemGroup>
 
   <ItemGroup>
