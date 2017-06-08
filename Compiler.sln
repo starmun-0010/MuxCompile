@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.Desktop", "AbdulMuqsit.Fa11BCS008.Compiler.Desktop\Compiler.Desktop.csproj", "{54ABF254-BBFC-4C9A-940F-2225A20D5B54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.Desktop", "Compiler.Desktop\Compiler.Desktop.csproj", "{54ABF254-BBFC-4C9A-940F-2225A20D5B54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compiler.Lexer", "AbdulMuqsit.Fa11BCS008.Compiler.Lexer\Compiler.Lexer.csproj", "{2D97835F-2194-43AD-8342-9174774FE1B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compiler.Lexer", "Compiler.Lexer\Compiler.Lexer.csproj", "{2D97835F-2194-43AD-8342-9174774FE1B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compiler.Parser", "AbdulMuqsit.Fa11BCS008.Compiler.Parser\Compiler.Parser.csproj", "{67FBC876-2C62-4F1A-9BF1-531F61992F1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compiler.Parser", "Compiler.Parser\Compiler.Parser.csproj", "{67FBC876-2C62-4F1A-9BF1-531F61992F1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.ParserGenerator", "AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator\Compiler.ParserGenerator.csproj", "{31F9E02F-C635-4C6F-8B88-B01342CA3C7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.ParserGenerator", "Compiler.ParserGenerator\Compiler.ParserGenerator.csproj", "{31F9E02F-C635-4C6F-8B88-B01342CA3C7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.Lexer.Tests", "AbdulMuqsit.Fa11BCS008.Compiler.Lexer.Tests\Compiler.Lexer.Tests.csproj", "{2FBA1481-A282-4E44-AD93-7614D4A93FC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.Lexer.Tests", "Compiler.Lexer.Tests\Compiler.Lexer.Tests.csproj", "{2FBA1481-A282-4E44-AD93-7614D4A93FC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BCBD4EB-0C80-40BD-BCF8-964A058BCF2D}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TinyC Grammer.json = TinyC Grammer.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.Common", "AbdulMuqsit.Fa11BCS008.Compiler.Common\Compiler.Common.csproj", "{AA8E93DB-4C6A-4548-8EBF-922F284A131B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.Common", "Compiler.Common\Compiler.Common.csproj", "{AA8E93DB-4C6A-4548-8EBF-922F284A131B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.ParserGenerator.Tests", "AbdulMuqsit.Fa11BCS008.Compiler.ParserGenerator.Tests\Compiler.ParserGenerator.Tests.csproj", "{9C48BB59-A8F2-47A6-9D6E-77766B2D16AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.ParserGenerator.Tests", "Compiler.ParserGenerator.Tests\Compiler.ParserGenerator.Tests.csproj", "{9C48BB59-A8F2-47A6-9D6E-77766B2D16AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.IntegrationTests", "AbdulMuqsit.Fa11BCS008.Compiler.IntegrationTests\Compiler.IntegrationTests.csproj", "{0001B26F-A911-4106-918C-0615428F1530}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.IntegrationTests", "Compiler.IntegrationTests\Compiler.IntegrationTests.csproj", "{0001B26F-A911-4106-918C-0615428F1530}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
