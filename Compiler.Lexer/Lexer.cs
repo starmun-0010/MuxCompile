@@ -64,14 +64,21 @@ namespace Compiler.Lexer
                 SkipWhiteSpace();
                 CountLineNumbers();
                 var token = AnalyzeCompositeTokens();
-                if (token != null) return token;
+                if (token != null)
+                {
+                    AdvanceCurrentCharacter(); return token;
+                }
 
                 token = AnalyzeLiterals();
-                if (token != null) return token;
-
+                if (token != null)
+                {
+                    AdvanceCurrentCharacter(); return token;
+                }
                 token = AnalyzeIdentifiers();
-                if (token != null) return token;
-
+                if (token != null)
+                {
+                    AdvanceCurrentCharacter(); return token;
+                }
                 return AnalyzeOtherCharacters();
 
             }
@@ -106,8 +113,13 @@ namespace Compiler.Lexer
             //go forward one character
             void AdvanceCurrentCharacter()
             {
+
                 _currentCharacterIndex++;
-                _currentCharacter = _input[_currentCharacterIndex];
+                if (_currentCharacterIndex < _input.Length)
+                {
+                    _currentCharacter = _input[_currentCharacterIndex];
+                }
+                else _currentCharacter = '$';
             };
 
             ////current lexeme is complete. move to one character after it
@@ -223,7 +235,10 @@ namespace Compiler.Lexer
 
             Token AnalyzeOtherCharacters()
             {
-                return new Token(_currentCharacter);
+
+                var token = new Token(_currentCharacter);
+                AdvanceCurrentCharacter();
+                return token;
             }
             #endregion
         }
