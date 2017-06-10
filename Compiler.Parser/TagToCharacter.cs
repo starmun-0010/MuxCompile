@@ -13,7 +13,8 @@ namespace Compiler.Parser
             {
                 case (int)Tag.ID:
                     return "id";
-
+                case (int)Tag.End:
+                    return "$";
                 default:
                     return ((char)tag).ToString();
             }

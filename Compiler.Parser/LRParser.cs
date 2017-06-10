@@ -32,9 +32,10 @@ namespace Compiler.Parser
                     {
                         stack.Pop();
                         topState = stack.Peek();
-                        stack.Push(parseTable.GoTo[topState][production.NonTerminal]);
-                        outSource.WriteLine(production.ToString());
+                       
                     }
+                    stack.Push(parseTable.GoTo[topState][production.NonTerminal]);
+                    outSource.WriteLine(production.ToString());
                 }
                 else if (action.action == Common.Action.Accept)
                 {
