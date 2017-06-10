@@ -10,11 +10,19 @@ using Compiler.Parser;
 using Compiler.ParserGenerator;
 using Moq;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace IntegrationTests
 {
     public class ParserTests
     {
+        private readonly ITestOutputHelper output;
+
+        public ParserTests(ITestOutputHelper output)
+        {
+            this.output = output;
+        }
+
         [Fact]
         public void ShouldParseExpressionInput()
         {
@@ -34,9 +42,9 @@ namespace IntegrationTests
             var mockOutSource = new Mock<IOutSource>();
             mockOutSource.Setup(os => os.WriteLine(It.IsAny<string>())).Callback<string>(s =>
             {
-                Console.WriteLine(s);
                 Debug.WriteLine(s);
-
+                output.WriteLine(s);
+                Console.WriteLine(s);
                 outPuts.Add(s);
             });
 
